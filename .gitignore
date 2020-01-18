@@ -372,3 +372,4 @@ DerivedData/
 /*.gcno
 
 # End of https://www.gitignore.io/api/node,react,reactnative
+*.lock
