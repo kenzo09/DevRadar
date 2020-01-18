@@ -2,6 +2,7 @@ const express = require('express')
 const monoose = require('mongoose')
 const routes = require('./routes')
 const dotenv = require('dotenv')
+const cors = require('cors')
 
 // Iniciar as configurações
 dotenv.config()
@@ -14,6 +15,7 @@ monoose.connect(process.env.DB_OMNISTACK, {
   useCreateIndex: true
 })
 
+app.use(cors())
 app.use(express.json())
 app.use(routes)
 
